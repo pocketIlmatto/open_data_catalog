@@ -1,0 +1,10 @@
+drop_geometry_table: true
+drop_statistical_table: true
+census_data:
+  url: 'http://www.ine.es/censos2011_datos/indicadores_seccion_censal_csv.zip'
+  keep_path: '*'
+field_mappings:
+  url: 'http://www.ine.es/censos2011_datos/indicadores_seccen_rejilla.xls'
+shp_data:
+  url: 'http://centrodedescargas.cnig.es/CentroDescargas/descargaDir?secDescDirLA=114023&pagActual=1&numTotReg=5&codSerieSel=CAANE'
+  keep_path: 'SIANE_CARTO_BASE_S_3M/anual/20110101/*'
