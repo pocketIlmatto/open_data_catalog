@@ -1,0 +1,8 @@
+# Rename to database.yaml locally
+default: &default
+  database: ''
+  geometry_table_name: ''
+  geometry_field_name: ''
+  host: ''
+  statistical_table_name: ''
+  username: ''
