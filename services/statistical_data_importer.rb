@@ -51,8 +51,8 @@ class StatisticalDataImporter
 
     puts "Building import statements for file #{file}."
 
+    row_count = 0
     csv.each do |row|
-      row_count = 0
       sql = "INSERT INTO " +
           "#{StatisticalDataImporter::table_name}(#{column_sql}) " +
           "VALUES "
@@ -67,10 +67,10 @@ class StatisticalDataImporter
         sql += '),'
       end
       sql = sql.delete_suffix(',') + ';'
-      puts "Importing #{row_count} rows into " +
-        "#{StatisticalDataImporter::table_name}."
       Database.exec(sql)
     end
+    puts "Imported #{row_count} rows into " +
+      "#{StatisticalDataImporter::table_name}"
   end
 
   def self.table_name
